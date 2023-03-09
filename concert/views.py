@@ -37,12 +37,12 @@ def index(request):
 
 
 def songs(request):
-    songs = req.get("SONGS_URL/song").json()
+    songs = req.get("http://songs-sn-labs-dennislamcv.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud/song").json()
     return render(request, "songs.html", {"songs": songs["songs"]})
 
 
 def photos(request):
-    photos = req.get("PHOTO_URL/picture").json()
+    photos = req.get("https://pictures.zt6smju1cxu.us-south.codeengine.appdomain.cloud/picture").json()
     return render(request, "photos.html", {"photos": photos})
 
 def login_view(request):
